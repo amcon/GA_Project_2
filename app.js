@@ -1,8 +1,8 @@
-require('dotenv').config();
 const express = require('express');
 const logger = require('morgan');
 
-const itunesRoute = require('./routes/itunes.js')
+const homeRoute = require('./routes/home.js');
+const apiRoute = require('./routes/api.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,6 +12,9 @@ app.set('views', 'views');
 
 app.use(logger('dev'));
 
-app.use('/', itunesRoute);
+app.use(express.static('./public'));
+
+app.use('/', homeRoute);
+app.use('/application', apiRoute);
 
 app.listen(PORT, () => console.log('Server is listening on port ', PORT));

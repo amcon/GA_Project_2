@@ -1,0 +1,21 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+
+.tab-container {
+  background-color: white;
+  height: 80vh;
+  width: 40%;
+  text-align: center;
+  margin: 3% 0 0 5%;
+  float: left;
+}
+
+.video-container {
+  background-color: white;
+  height: 30vh;
+  width: 35%;
+  float: right;
+  margin: 3% 10% 0 0;
+}

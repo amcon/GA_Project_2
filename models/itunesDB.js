@@ -7,7 +7,7 @@ function getArtistInfo(req, res, next) {
   .then(r => r.json())
   .then((result) => {
     res.artist = result;
-    console.log(result);
+    // console.log(result);
     next();
   })
     .catch((err) => {
