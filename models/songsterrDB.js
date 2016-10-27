@@ -7,7 +7,7 @@ function getTabInfo(req, res, next) {
   .then(r => r.json())
   .then((result) => {
     res.tab = result;
-    console.log(result);
+    // console.log(result);
     next();
   })
     .catch((err) => {
