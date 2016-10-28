@@ -1,14 +1,18 @@
 const router = require('express').Router();
-const { getArtistInfo } = require('../models/itunesDB');
-const { getTabInfo } = require('./../models/songsterrDB');
-const { getLyricInfo } = require('./../models/lyricsNMusicDB')
+const dbService = require('../models/favorites');
+const { getArtistInfo } = require('./../services/itunes');
+const { getTabInfo } = require('./../services/songsterr');
+const { getLyricInfo } = require('./../services/lyricsNMusic');
+// const bodyParser = require('body-parser');
 
-router.get('/', getArtistInfo, getTabInfo, getLyricInfo, getItunesFavorite, getLyricFavorite, getSongsterrFavorite, (req, res) => {
+// app.use(bodyParser.urlencoded({ extended: true }));
+
+router.get('/', getArtistInfo, getTabInfo, getLyricInfo, dbService.getFavorite, (req, res) => {
   res.render('application', {
     favorites: res.favorites || [],
-    artist: res.artist || [],
-    tab: res.tab || [],
-    lyrics: res.lyrics || [],
+    artist: res.artist,
+    tab: res.tab,
+    lyrics: res.lyrics,
   });
 });
 
