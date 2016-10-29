@@ -7,13 +7,17 @@ const { getLyricInfo } = require('./../services/lyricsNMusic');
 
 // app.use(bodyParser.urlencoded({ extended: true }));
 
-router.get('/', getArtistInfo, getTabInfo, getLyricInfo, dbService.getFavorite, (req, res) => {
+router.get('/', getArtistInfo, getTabInfo, /*getLyricInfo,*/ dbService.getFavorite, (req, res) => {
   res.render('application', {
     favorites: res.favorites || [],
     artist: res.artist,
     tab: res.tab,
-    lyrics: res.lyrics,
+    lyric: res.lyric,
   });
+});
+
+router.post('/favorites', dbService.saveFavorite, (req, res) => {
+  res.redirect('/application');
 });
 
 module.exports = router;

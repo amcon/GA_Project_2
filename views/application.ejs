@@ -22,16 +22,21 @@
       <% tab[32].id %>
       <% tab[32].title %>
       <h3>Tab Types: <%= tab[32].tabTypes %></h3>
-      <div class="lyrics">
-        <p><%# lyrics[0].snippet %></p>
+      <div class="lyric">
+        <p><%# lyric[0].snippet %></p>
       </div>
     </div>
   </div>
   <div class="right-column">
-    <div class="player">
+    <div class="favorites">
       <div class="button-section">
-      <input type="submit" value="SAVE SONG TO FAVORITES"></input>
-      <input type="submit" value="FIND A NEW SONG"></input>
+      <form class="save-favorites" action="/favorites" method="post">
+        <input type="hidden" name="favorites[artwork]" value="<%= artist.results[0].artworkUrl100%>">
+        <input type="hidden" name="favorites[artistName]" value="<%= artist.results[0].artistName %>">
+        <input type="hidden" name="favorites[trackName]" value="<%= artist.results[0].trackName %>">
+        <input type="hidden" name="favorites[title]" value="<%= tab[32].title %>">
+        <input type="submit" value="Add To Your Favorites">
+      </form>
     </div>
   </div>
 </body>

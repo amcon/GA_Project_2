@@ -7,7 +7,7 @@ function getLyricInfo(req, res, next) {
   fetch(`${API_URL}${API_KEY}&artist=sia&track=cheap`)
   .then(r => r.json())
   .then((result) => {
-    res.lyrics = result;
+    res.lyric = result;
     // console.log(result);
     next();
   })

@@ -38,7 +38,7 @@ body {
   margin-top: .5%;
 }
 
-.player {
+.favorites {
   background-color: #f2f0d7;
   height: 45vh;
   width: 80%;
@@ -87,7 +87,7 @@ p {
   height: 70%;
 }
 
-.lyrics {
+.lyric {
   width: 60%;
   text-align: center;
 }
