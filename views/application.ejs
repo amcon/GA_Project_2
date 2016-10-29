@@ -31,10 +31,10 @@
     <div class="favorites">
       <div class="button-section">
       <form class="save-favorites" action="/favorites" method="post">
-        <input type="hidden" name="favorites[artwork]" value="<%= artist.results[0].artworkUrl100%>">
+        <input type="hidden" name="favorites[artwork]" value="<% artist.results[0].artworkUrl100%>">
         <input type="hidden" name="favorites[artistName]" value="<%= artist.results[0].artistName %>">
         <input type="hidden" name="favorites[trackName]" value="<%= artist.results[0].trackName %>">
-        <input type="hidden" name="favorites[title]" value="<%= tab[32].title %>">
+        <input type="hidden" name="favorites[title]" value="<% tab[32].title %>">
         <input type="submit" value="Add To Your Favorites">
       </form>
     </div>
