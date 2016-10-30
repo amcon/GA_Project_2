@@ -32,20 +32,23 @@ body {
 }
 
 .right-column {
-  width: 50%;
-  height: 200%;
+  width: 40%;
+  height: 100%;
   float: right;
   margin-top: .5%;
+  background-color: #f2f0d7;
+   margin: 1% 10% 0 0;
+  border: solid black 2px;
 }
 
-.favorites {
+/*.favorites {
   background-color: #f2f0d7;
   height: 80vh;
   width: 80%;
   float: right;
   margin: 1% 10% 0 0;
   border: solid black 2px;
-}
+}*/
 
 .button-section {
   margin: 80% 10% 0 0;
@@ -55,9 +58,11 @@ body {
 }
 
 input {
-  margin-bottom: 10%;
-  margin-left: 7%;
-  height: 20vh;
+  height: 40vh;
+  width: 100%;
+}
+
+.delete {
   width: 50%;
 }
 
