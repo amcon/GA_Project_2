@@ -24,6 +24,13 @@
       <h3>Tab Types: <%= tab[32].tabTypes %></h3>
       <div class="lyric">
         <p><%# lyric[0].snippet %></p>
+      <form class="save-favorites" action="/favorites" method="post">
+        <input type="hidden" name="favorites[artwork]" value="<% artist.results[0].artworkUrl100%>">
+        <input type="hidden" name="favorites[artistName]" value="<%= artist.results[0].artistName %>">
+        <input type="hidden" name="favorites[trackName]" value="<%= artist.results[0].trackName %>">
+        <input type="hidden" name="favorites[tabTypes]" value="<% tab[32].tabTypes %>">
+        <input type="submit" value="Add To Your Favorites">
+      </form>
       </div>
     </div>
   </div>
@@ -38,20 +45,11 @@
             <h4><%= favorites[i].artistName %></h4>
             <h4><%= favorites[i].trackName %></h4>
             <form class="delete-favorites" action="/favorites/<%= favorites[i]._id %>?_method=DELETE" method="post">
-              <input type="submit" value="Delete">
+              <input class="delete" type="submit" value="Delete">
             </form>
           </li>
           <% }; %>
         </ul>
-      <div class="button-section">
-      <form class="save-favorites" action="/favorites" method="post">
-        <input type="hidden" name="favorites[artwork]" value="<% artist.results[0].artworkUrl100%>">
-        <input type="hidden" name="favorites[artistName]" value="<%= artist.results[0].artistName %>">
-        <input type="hidden" name="favorites[trackName]" value="<%= artist.results[0].trackName %>">
-        <input type="hidden" name="favorites[tabTypes]" value="<% tab[32].tabTypes %>">
-        <input type="submit" value="Add To Your Favorites">
-      </form>
-    </div>
   </div>
 </body>
 </html>

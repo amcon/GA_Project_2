@@ -58,9 +58,11 @@ body {
 }
 
 input {
-  margin-bottom: 10%;
-  margin-left: 7%;
-  height: 20vh;
+  height: 40vh;
+  width: 100%;
+}
+
+.delete {
   width: 50%;
 }
 
