@@ -14,8 +14,5 @@ router.get('/', authenticate, getArtistInfo, getTabInfo, /*getLyricInfo,*/ dbSer
   });
 });
 
-// router.post('/favorites', dbService.saveFavorite, (req, res) => {
-//   res.redirect('/application');
-// });
 
 module.exports = router;

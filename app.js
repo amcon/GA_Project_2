@@ -51,3 +51,4 @@ app.delete('/favorites/:id', dbService.deleteFavorite, (req, res) => {
 });
 
 app.listen(PORT, () => console.log('Server is listening on port ', PORT));
+

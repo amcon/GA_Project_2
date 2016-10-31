@@ -60,6 +60,24 @@ function deleteFavorite(req, res, next) {
   return false;
 }
 
+function deleteFavorite(req, res, next) {
+  MongoClient.connect(dbConnection, (err, db) => {
+    if (err) return next(err);
+
+    db.collection('favorites')
+      .findAndRemove({ _id: ObjectID(req.params.id) }, (removeErr, doc) => {
+        if (removeErr) return next(removeErr);
+
+        // return the data
+        res.removed = doc;
+        db.close();
+        return next();
+      });
+    return false;
+  });
+  return false;
+}
+
 module.exports = {
   getFavorite,
   saveFavorite,
