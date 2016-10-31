@@ -63,22 +63,5 @@
         </ul>
       </div>
   </div>
-  <div class="right-column">
-    <div class="favorites">
-      <h3><%# favorites.length %> Favorites</h3>
-        <ul class="favorites">
-          <%# Saved movies will be displayed here%>
-          <% for (let i = 0; i < favorites.length; i++) { %>
-          <li class="movie-item ">
-            <img class="poster" src="<%= favorites[i].artwork %>" alt="" />
-            <h4><%= favorites[i].artistName %></h4>
-            <h4><%= favorites[i].trackName %></h4>
-            <form class="delete-favorites" action="/favorites/<%= favorites[i]._id %>?_method=DELETE" method="post">
-              <input class="delete" type="submit" value="Delete">
-            </form>
-          </li>
-          <% }; %>
-        </ul>
-  </div>
 </body>
 </html>
