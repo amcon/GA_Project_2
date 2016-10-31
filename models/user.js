@@ -1,6 +1,6 @@
 const { ObjectID } = require('mongodb');
-const { getDB }    = require('../lib/dbConnect.js');
-const bcrypt       = require('bcryptjs');
+const { getDB } = require('../lib/dbConnect.js');
+const bcrypt = require('bcryptjs');
 
 const SALTROUNDS = 10;
 

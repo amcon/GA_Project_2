@@ -70,3 +70,7 @@ input {
   width: 20%;
   border-radius: 3em;
 }
+
+.tab_search {
+  font-size: 2em;
+}

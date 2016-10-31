@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(methodOverride('_method'));
-app.use(express.static('./public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 
 app.use(session({
