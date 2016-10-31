@@ -24,34 +24,20 @@
     </div>
   </div>
     <div class="content">
-<<<<<<< HEAD
       <% tab[0].id %>
       <h3>Tabs Present/Tab Types: <%= tab[0].tabTypes %></h3>
       <h3>Chords Present: <%= tab[0].chordsPresent %></h3>
       <!-- <div class="lyric">
         <p><%# lyric[0].snippet %></p> -->
-=======
-      <% tab[32].id %>
-      <%= tab[32].title %>
-      <h3>Tab Types: <%= tab[32].tabTypes %></h3>
-      <div class="lyric">
-        <p><%# lyric[0].snippet %></p>
->>>>>>> d5a3116c7ef051a53940c16af36d05baeef78c7e
       <form class="save-favorites" action="/favorites" method="post">
         <input type="hidden" name="favorites[artwork]" value="<% artist.results[0].artworkUrl100%>">
         <input type="hidden" name="favorites[artistName]" value="<%= artist.results[0].artistName %>">
         <input type="hidden" name="favorites[trackName]" value="<%= artist.results[0].trackName %>">
-<<<<<<< HEAD
         <input type="hidden" name="favorites[tabTypes]" value="<% tab[0].tabTypes %>">
         <input type="submit" value="Add To Your Favorites">
       </form>
       <a class="link" href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=<%= artist.results[0].trackName %>&a=<%= artist.results[0].artistName %>">Give Me the Tab</a>
       <a class="link" href="https://www.youtube.com/results?search_query=<%= artist.results[0].trackName %>_<%= artist.results[0].artistName %>">Watch on YouTube</a>
-=======
-        <input type="hidden" name="favorites[tabTypes]" value="<% tab[32].tabTypes %>">
-        <input type="submit" value="Add To Your Favorites">
-      </form>
->>>>>>> d5a3116c7ef051a53940c16af36d05baeef78c7e
       </div>
     </div>
   <div class="right-column">
