@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Guitar Tab Application</title>
-    <link rel="stylesheet" href="main.css" media="screen" title="no title">
+    <link rel="stylesheet" href="home.css" media="screen" title="no title">
   </head>
   <body>
+    <div class="container">
     <h1>Login</h1>
-    <form class="" action="/auth" method="post">
-        <input type="text" name="user[username]" value="" placeholder="Username">
-        <input type="password" name="user[password]" value="" placeholder="Password">
-        <input type="submit" name="name" value="Log in">
-    </form>
+      <form class="" action="/auth" method="post">
+          <input type="text" name="user[username]" value="" placeholder="Username">
+          <input type="password" name="user[password]" value="" placeholder="Password">
+          <input class="small_button" type="submit" name="name" value="Log in">
+      </form>
+    </div>
   </body>
 </html>

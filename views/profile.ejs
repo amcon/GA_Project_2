@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Guitar Tab Application</title>
-    <link rel="stylesheet" href="main.css" media="screen" title="no title">
+    <link rel="stylesheet" href="home.css" media="screen" title="no title">
   </head>
   <body>
     <!-- Example -->
-    <h1>Welcome! <%= user.username %></h1>
-    <a href="/application">Tab Search</a>
-    <form action="/auth?_method=DELETE" method="post">
-      <input type="submit" value="Logout">
-    </form>
+    <div class="container">
+      <h1>Welcome <%= user.username %>. Time to get started</h1>
+      <a href="/application">Tab Search</a>
+      <form action="/auth?_method=DELETE" method="post">
+        <input type="submit" value="Logout">
+      </form>
+    </div>
   </body>
 </html>
