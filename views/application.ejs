@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Guitar Tab Application</title>
-  <link rel="stylesheet" href="main.css" media="screen" title="no title">
+  <link rel="stylesheet" href="./../main.css" media="screen" title="no title">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
@@ -21,19 +21,19 @@
     </div>
   </div>
     <div class="content">
-      <% tab[32].id %>
-      <h3>Chords Present: <%= tab[32].chordsPresent %></h3>
-      <h3>Tabs Present/Tab Types: <%= tab[32].tabTypes %></h3>
+      <% tab[0].id %>
+      <h3>Tabs Present/Tab Types: <%= tab[0].tabTypes %></h3>
+      <h3>Chords Present: <%= tab[0].chordsPresent %></h3>
       <!-- <div class="lyric">
         <p><%# lyric[0].snippet %></p> -->
       <form class="save-favorites" action="/favorites" method="post">
         <input type="hidden" name="favorites[artwork]" value="<% artist.results[0].artworkUrl100%>">
         <input type="hidden" name="favorites[artistName]" value="<%= artist.results[0].artistName %>">
         <input type="hidden" name="favorites[trackName]" value="<%= artist.results[0].trackName %>">
-        <input type="hidden" name="favorites[tabTypes]" value="<% tab[32].tabTypes %>">
+        <input type="hidden" name="favorites[tabTypes]" value="<% tab[0].tabTypes %>">
         <input type="submit" value="Add To Your Favorites">
       </form>
-      <a class="link" href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=Cheap&a=Sia">Give Me the Tab</a>
+      <a class="link" href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=<%= artist.results[0].trackName %>&a=<%= artist.results[0].artistName %>">Give Me the Tab</a>
       </div>
     </div>
   <div class="right-column">

@@ -7,7 +7,11 @@ const indexRouter = require('./routes/index.js');
 const apiRoute = require('./routes/api.js');
 const authRouter = require('./routes/auth');
 const usersRouter = require('./routes/users');
+const searchRouter = require('./routes/search');
 const dbService = require('./models/favorites');
+const { authenticate } = require('./lib/auth');
+const { getArtistInfo } = require('./services/itunes');
+const { getTabInfo } = require('./services/songsterr');
 const path = require('path');
 
 const app = express();
@@ -35,6 +39,7 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/users', usersRouter);
+app.use('/search', searchRouter);
 app.use('/application', apiRoute);
 
 app.post('/favorites', dbService.saveFavorite, (req, res) => {
