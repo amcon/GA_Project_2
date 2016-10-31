@@ -17,7 +17,7 @@ const path = require('path');
 const app = express();
 const SECRET = 'doineedthis3000';
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env[2] || process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
