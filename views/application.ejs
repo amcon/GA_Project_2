@@ -8,8 +8,11 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
-  <a href="/users/profile">Home</a>
-  <h1>Here is your tab of the day:</h1>
+  <div class="nav">
+    <a class="redirect" href="/users/profile">Home</a>
+    <a class="redirect" href="/search">Search</a>
+  </div>
+  <h1>Here is your tab:</h1>
   <div class="tab-container">
     <div class="tab-header">
     <div class="picture">
@@ -34,6 +37,7 @@
         <input type="submit" value="Add To Your Favorites">
       </form>
       <a class="link" href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=<%= artist.results[0].trackName %>&a=<%= artist.results[0].artistName %>">Give Me the Tab</a>
+      <a class="link" href="https://www.youtube.com/results?search_query=<%= artist.results[0].trackName %>_<%= artist.results[0].artistName %>">Watch on YouTube</a>
       </div>
     </div>
   <div class="right-column">
@@ -45,10 +49,13 @@
           <% for (let i = 0; i < favorites.length; i++) { %>
           <li>
             <img src="<%= favorites[i].artwork %>" alt="" />
-            <h3><%= favorites[i].artistName %></h3>
+            <h4><%= favorites[i].artistName %></h4>
             <h3><%= favorites[i].trackName %></h3>
-            <a class="link" href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=Cheap&a=Sia">Give Me the Tab</a>
             <form class="delete-favorites" action="/favorites/<%= favorites[i]._id %>?_method=DELETE" method="post">
+              <input type="hidden" name="favorites[artwork]" value="<% artist.results[0].artworkUrl100%>">
+              <input type="hidden" name="favorites[artistName]" value="<%= artist.results[0].artistName %>">
+              <input type="hidden" name="favorites[trackName]" value="<%= artist.results[0].trackName %>">
+              <input type="hidden" name="favorites[tabTypes]" value="<% tab[0].tabTypes %>">
               <input class="delete" type="submit" value="Delete">
             </form>
           </li>

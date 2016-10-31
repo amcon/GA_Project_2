@@ -8,10 +8,10 @@ body {
 .tab-container {
   background-color: white;
   opacity: .9;
-  height: 75vh;
+  height: 80vh;
   width: 45%;
   text-align: center;
-  margin: 1% 0 0 5%;
+  margin: 1% 0 0 3%;
   float: left;
   border-radius: .1em;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .favorites {
-  width: 40%;
+  width: 43%;
   height: 100%;
   float: right;
   background-color: white;
@@ -60,7 +60,7 @@ body {
 }
 
 input {
-  height: 3vh;
+  height: 3.5vh;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
   border-radius: 1em;
@@ -78,6 +78,8 @@ input[type=text] {
 h1 {
   color: #02d173;
   font-family: 'Montserrat', sans-serif;
+  margin-top: 1%;
+  margin-bottom: .5%;
 }
 
 h2 {
@@ -89,6 +91,12 @@ h2 {
 h3 {
   font-family: 'Montserrat', sans-serif;
   }
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #02d173;
+  font-size: 1em;
+}
 
 p {
   font-family: 'Montserrat', sans-serif;
@@ -145,4 +153,16 @@ ul {
 .lyric {
   width: 60%;
   text-align: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 17%;
+  margin-left: 38%;
+}
+
+.redirect {
+  margin: 0;
 }
