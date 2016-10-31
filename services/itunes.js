@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const API_URL = 'https://itunes.apple.com/search?term=sia&limit=1';
+const API_URL = 'https://itunes.apple.com/search?term=$chandelier&entity=musicTrack&medium=music&limit=1';
 
 function getArtistInfo(req, res, next) {
   fetch(API_URL)
