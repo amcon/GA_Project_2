@@ -1,10 +1,11 @@
 const router = require('express').Router();
+const { authenticate } = require('../lib/auth');
 const dbService = require('../models/favorites');
 const { getArtistInfo } = require('./../services/itunes');
 const { getTabInfo } = require('./../services/songsterr');
 const { getLyricInfo } = require('./../services/lyricsNMusic');
 
-router.get('/', getArtistInfo, getTabInfo, /*getLyricInfo,*/ dbService.getFavorite, (req, res) => {
+router.get('/', authenticate, getArtistInfo, getTabInfo, /*getLyricInfo,*/ dbService.getFavorite, (req, res) => {
   res.render('application', {
     favorites: res.favorites || [],
     artist: res.artist,
@@ -13,8 +14,8 @@ router.get('/', getArtistInfo, getTabInfo, /*getLyricInfo,*/ dbService.getFavori
   });
 });
 
-router.post('/favorites', dbService.saveFavorite, (req, res) => {
-  res.redirect('/application');
-});
+// router.post('/favorites', dbService.saveFavorite, (req, res) => {
+//   res.redirect('/application');
+// });
 
 module.exports = router;

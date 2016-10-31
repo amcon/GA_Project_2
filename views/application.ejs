@@ -20,24 +20,37 @@
   </div>
     <div class="content">
       <% tab[32].id %>
-      <% tab[32].title %>
+      <%= tab[32].title %>
       <h3>Tab Types: <%= tab[32].tabTypes %></h3>
       <div class="lyric">
         <p><%# lyric[0].snippet %></p>
+      <form class="save-favorites" action="/favorites" method="post">
+        <input type="hidden" name="favorites[artwork]" value="<% artist.results[0].artworkUrl100%>">
+        <input type="hidden" name="favorites[artistName]" value="<%= artist.results[0].artistName %>">
+        <input type="hidden" name="favorites[trackName]" value="<%= artist.results[0].trackName %>">
+        <input type="hidden" name="favorites[tabTypes]" value="<% tab[32].tabTypes %>">
+        <input type="submit" value="Add To Your Favorites">
+      </form>
       </div>
     </div>
   </div>
   <div class="right-column">
     <div class="favorites">
-      <div class="button-section">
-      <form class="save-favorites" action="/favorites" method="post">
-        <input type="hidden" name="favorites[artwork]" value="<% artist.results[0].artworkUrl100%>">
-        <input type="hidden" name="favorites[artistName]" value="<%= artist.results[0].artistName %>">
-        <input type="hidden" name="favorites[trackName]" value="<%= artist.results[0].trackName %>">
-        <input type="hidden" name="favorites[title]" value="<% tab[32].title %>">
-        <input type="submit" value="Add To Your Favorites">
-      </form>
-    </div>
+      <h3><%# favorites.length %>Favorites</h3>
+        <ul class="favorites">
+          <%# Saved movies will be displayed here%>
+          <% for (let i = 0; i < favorites.length; i++) { %>
+          <li>
+            <img src="<%= favorites[i].artwork %>" alt="" />
+            <h4><%= favorites[i].artistName %></h4>
+            <h4><%= favorites[i].trackName %></h4>
+            <form class="delete-favorites" action="/favorites/<%= favorites[i]._id %>?_method=DELETE" method="post">
+              <input class="delete" type="submit" value="Delete">
+            </form>
+          </li>
+          <% }; %>
+        </ul>
   </div>
+  <a href="/users/profile">Home</a>
 </body>
 </html>
