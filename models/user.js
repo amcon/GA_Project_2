@@ -1,3 +1,6 @@
+/* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
+/* eslint no-param-reassign: ["error", { "props": false }] */
+
 // Big props to my GA Instructors for this code. Anything regarding users, encryption, and sessions is their work.
 
 const { ObjectID } = require('mongodb');
