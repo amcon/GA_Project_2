@@ -2,6 +2,8 @@ const express = require('express')
 
 const indexRouter = express.Router();
 
+// This route runs the routes from home to the login page and the signup page.
+
 indexRouter.get('/', (req, res) => {
   res.render('index');
 });

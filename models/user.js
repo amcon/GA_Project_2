@@ -1,3 +1,5 @@
+// Big props to my GA Instructors for this code. Anything regarding users, encryption, and sessions is their work.
+
 const { ObjectID } = require('mongodb');
 const { getDB } = require('../lib/dbConnect.js');
 const bcrypt = require('bcryptjs');

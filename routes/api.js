@@ -5,6 +5,8 @@ const { getArtistInfo } = require('./../services/itunes');
 const { getTabInfo } = require('./../services/songsterr');
 const { getLyricInfo } = require('./../services/lyricsNMusic');
 
+//This middleware was necessary before my search function was operating. It has been left for reference.
+
 router.get('/', authenticate, getArtistInfo, getTabInfo, /*getLyricInfo,*/ dbService.getFavorite, (req, res) => {
   res.render('application', {
     favorites: res.favorites || [],

@@ -42,6 +42,8 @@ app.use('/users', usersRouter);
 app.use('/search', searchRouter);
 app.use('/application', apiRoute);
 
+//This middleware posts and deletes the database information to the application page.
+
 app.post('/favorites', dbService.saveFavorite, (req, res) => {
   res.redirect('/application');
 });
