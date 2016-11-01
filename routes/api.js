@@ -1,8 +1,11 @@
-const router = require('express').Router();
-const { authenticate } = require('../lib/auth');
-const dbService = require('../models/favorites');
+/* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
+/* eslint no-param-reassign: ["error", { "props": false }] */
+
+const router            = require('express').Router();
+const { authenticate }  = require('../lib/auth');
+const dbService         = require('../models/favorites');
 const { getArtistInfo } = require('./../services/itunes');
-const { getTabInfo } = require('./../services/songsterr');
+const { getTabInfo }    = require('./../services/songsterr');
 // const { getLyricInfo } = require('./../services/lyricsNMusic');
 
 /* This middleware was necessary before my search function was operating.
