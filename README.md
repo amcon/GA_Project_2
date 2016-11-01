@@ -10,7 +10,7 @@ utilizing the Songsterr, Itunes, and Lyrics N Music APIs.
 
 This is an application for a guitar player who doesn't want/need to pay for sheet-music, who wants a place to get new tabs/chords and have the ability to have a favorites page where she can reference and rate tabs for future reference.
 
-### Interaction Design 
+### Walkthrough
 
 A new user will create a username with a corresponding password.
 Once the username has been created, she can now log into the application.
