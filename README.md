@@ -22,18 +22,23 @@ and delete.
 The application uses MongoDB as a local database and Heroku.
 
 ### Wireframes
+![Form Wireframe](/public/app-wireframe-1.png)
+![App Wireframe](/public/app-wireframe-2.png)
 
 ### Technologies Used: 
 - [x] HTML
-- [x]CSS 
-- [x]JS
-- [x]NODE.JS
-- [x]Path
-- [x]MongoDB
-- [x]dotEnv
+- [x] CSS 
+- [x] JS
+- [x] NODE.JS
+- [x] Path
+- [x] MongoDB
+- [x] dotEnv
 
 ### References
 
 - [Songsterr API]
-
+(https://www.songsterr.com/a/wa/api)
 - [Itunes API] 
+(https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
+- [LyricsNMusic API]
+(http://www.lyricsnmusic.com/api)
