@@ -1,8 +1,8 @@
 # General Assembly - Project 2 
 Aaron Conklin
 
-## Server-side application for guitar tabs utilizing the 
-Songsterr, Itunes, and Lyrics N Music APIs.  
+## Guitar Tab Database Application 
+utilizing the Songsterr, Itunes, and Lyrics N Music APIs.  
 
 ![guitar-smash](/public/guitar-smash.gif)
 
