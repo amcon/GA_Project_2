@@ -1,11 +1,14 @@
-const express = require('express');
+/* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
+/* eslint no-param-reassign: ["error", { "props": false }] */
 
-const searchRouter = express.Router();
+const express           = require('express');
 
-const dbService = require('../models/favorites');
-const { authenticate } = require('../lib/auth');
+const searchRouter      = express.Router();
+
+const dbService         = require('../models/favorites');
+const { authenticate }  = require('../lib/auth');
 const { getArtistInfo } = require('./../services/itunes');
-const { getTabInfo } = require('./../services/songsterr');
+const { getTabInfo }    = require('./../services/songsterr');
 
 /* This route runs middleware for the search page. It authenticates that the session
 is still intact and posts the results from the API searches and posts to the

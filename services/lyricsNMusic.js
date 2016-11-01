@@ -1,4 +1,7 @@
-const fetch = require('node-fetch');
+/* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
+/* eslint no-param-reassign: ["error", { "props": false }] */
+
+const fetch   = require('node-fetch');
 
 const API_URL = 'http://api.lyricsnmusic.com/songs?api_key=';
 const API_KEY = process.env.LYRICS_N_MUSIC_KEY;

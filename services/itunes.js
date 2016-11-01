@@ -1,4 +1,7 @@
-const fetch = require('node-fetch');
+/* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
+/* eslint no-param-reassign: ["error", { "props": false }] */
+
+const fetch   = require('node-fetch');
 
 const API_URL = 'https://itunes.apple.com/search?';
 

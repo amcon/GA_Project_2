@@ -1,4 +1,7 @@
-const express = require('express');
+/* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
+/* eslint no-param-reassign: ["error", { "props": false }] */
+
+const express     = require('express');
 
 const indexRouter = express.Router();
 
