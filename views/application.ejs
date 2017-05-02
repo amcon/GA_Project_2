@@ -36,8 +36,8 @@
         <input type="hidden" name="favorites[tabTypes]" value="<% tab[0].tabTypes %>">
         <input id="add-favorite" type="submit" value="Add To Your Favorites">
       </form>
-      <a class="link" href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=<%= artist.results[0].trackName %>&a=<%= artist.results[0].artistName %>">Give Me the Tab</a>
-      <a class="link" href="https://www.youtube.com/results?search_query=<%= artist.results[0].trackName %>_<%= artist.results[0].artistName %>">Watch on YouTube</a>
+      <a target="_blank" class="link" href="http://www.songsterr.com/a/wa/bestMatchForQueryString?s=<%= artist.results[0].trackName %>&a=<%= artist.results[0].artistName %>">Give Me the Tab</a>
+      <a target="_blank" class="link" href="https://www.youtube.com/results?search_query=<%= artist.results[0].trackName %>_<%= artist.results[0].artistName %>">Watch on YouTube</a>
       </div>
     </div>
   <div class="right-column">
