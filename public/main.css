@@ -3,6 +3,8 @@ body {
   background-size: cover;
   background-position: center;
   text-align: center;
+  padding-bottom: 100px;
+  height: 700px;
 }
 
 .tab-container {
@@ -14,6 +16,7 @@ body {
   margin: 1% 0 0 2%;
   float: left;
   border-radius: .1em;
+  padding-bottom: 40px;
 }
 
 .tab-header {
@@ -165,4 +168,9 @@ ul {
 
 .redirect {
   margin: 0;
+}
+
+
+.delete-favorites {
+  margin-bottom: 20px;
 }
